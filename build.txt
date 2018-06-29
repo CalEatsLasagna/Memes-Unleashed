@@ -1,0 +1,3 @@
+author = Cal
+version = 0.53
+displayName = MemesUnleashed
