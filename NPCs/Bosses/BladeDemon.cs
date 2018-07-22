@@ -13,12 +13,13 @@ using MemesUnleashed.Projectiles;
 namespace MemesUnleashed.NPCs.Bosses
 {
 	[AutoloadBossHead]
-	public class BladeDemon : ModNPC
-	{
-		private const int size = 240;
+	public class BladeDemon : ModNPC{
+	int timer = 0;
+	
+		private const int size = 200;
 		private const int particleSize = 10;
-		public static readonly int arenaWidth = (int)(2f * NPC.sWidth);
-		public static readonly int arenaHeight = (int)(2f * NPC.sHeight);
+		public static readonly int arenaWidth = (int)(1f * NPC.sWidth);
+		public static readonly int arenaHeight = (int)(1f * NPC.sHeight);
 
 		public override void SetStaticDefaults()
 		{
@@ -31,7 +32,7 @@ namespace MemesUnleashed.NPCs.Bosses
 			npc.aiStyle = 5;
 			npc.lifeMax = 4500;
 			npc.damage = 25;
-			npc.defense = 22;
+			npc.defense = 11;
 			npc.knockBackResist = 0f;
 			npc.dontTakeDamage = false;
 			npc.width = size;
@@ -49,13 +50,20 @@ namespace MemesUnleashed.NPCs.Bosses
 			{
 				npc.buffImmune[k] = true;
 			}
-			music = MusicID.Boss1;
+			music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/Throwdown!");
+		}
+				public override void AI()
+		{
+			
+		timer++;
+		if (timer % 80 == 0)
+		NPC.NewNPC((int)npc.position.X, (int)npc.position.Y, mod.NPCType("SpiritSword"));
 		}
 		
 		public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
 		{
 			npc.lifeMax = (int)(npc.lifeMax / Main.expertLife * 1.0875f * bossLifeScale);
-			npc.defense = 30;
+			npc.defense = 12;
 		}
 	}
 }

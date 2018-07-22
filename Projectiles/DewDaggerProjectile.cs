@@ -1,4 +1,4 @@
-﻿using MemesUnleashed.Items.Weapons;
+﻿using MemesUnleashed.memeItems.Weapons;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;

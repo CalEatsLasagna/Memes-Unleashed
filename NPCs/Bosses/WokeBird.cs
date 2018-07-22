@@ -30,7 +30,7 @@ namespace MemesUnleashed.NPCs.Bosses
 			npc.aiStyle = 56;
 			npc.lifeMax = 32500;
 			npc.damage = 70;
-			npc.defense = 28;
+			npc.defense = 14;
 			npc.knockBackResist = 0f;
 			npc.dontTakeDamage = false;
 			npc.width = size;
@@ -48,13 +48,12 @@ namespace MemesUnleashed.NPCs.Bosses
 			{
 				npc.buffImmune[k] = true;
 			}
-			music = MusicID.Boss3;
-
+			music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/Throwdown!");
 		}
 		public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
 		{
 			npc.lifeMax = (int)(npc.lifeMax / Main.expertLife * 1.2f * bossLifeScale);
-			npc.defense = 30;
+			npc.defense = 15;
 		}
 	}
 }
