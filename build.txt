@@ -1,4 +1,4 @@
 author = Cal
-version = 1.30
+version = 2.2.7
 displayName = Memes Unleashed
 homepage = https://discord.gg/gTzmEsK

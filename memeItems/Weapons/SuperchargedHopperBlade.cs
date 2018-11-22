@@ -12,7 +12,7 @@ namespace MemesUnleashed.memeItems.Weapons
 		}
 		public override void SetDefaults()
 		{
-			item.damage = 28;
+			item.damage = 32;
 			item.melee = true;
 			item.width = 96;
 			item.height = 96;

@@ -44,7 +44,7 @@ namespace MemesUnleashed.Projectiles
 				{
 					projectile.velocity.Y = -oldVelocity.Y;
 				}
-				projectile.velocity *= 1.75f;
+				projectile.velocity *= 1.05f;
 				Main.PlaySound(SoundID.Item10, projectile.position);
 			}
 			return false;
@@ -62,7 +62,7 @@ namespace MemesUnleashed.Projectiles
 		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
 		{
 			projectile.ai[0] += 0.1f;
-			projectile.velocity *= 1.20f;
+			projectile.velocity *= 1f;
 		}
 	}
 }

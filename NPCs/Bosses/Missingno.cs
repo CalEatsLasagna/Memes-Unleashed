@@ -15,7 +15,6 @@ namespace MemesUnleashed.NPCs.Bosses
 	[AutoloadBossHead]
 	public class Missingno : ModNPC
 	{
-		private const int size = 240;
 		private const int particleSize = 10;
 		public static readonly int arenaWidth = (int)(1f * NPC.sWidth);
 		public static readonly int arenaHeight = (int)(1f * NPC.sHeight);
@@ -34,8 +33,8 @@ namespace MemesUnleashed.NPCs.Bosses
 			npc.defense = 8;
 			npc.knockBackResist = 0f;
 			npc.dontTakeDamage = false;
-			npc.width = size;
-			npc.height = size;
+			npc.width = 54;
+			npc.height = 128;
 			npc.value = Item.buyPrice(0, 7, 0, 0);
 			npc.npcSlots = 50f;
 			npc.boss = true;
@@ -51,6 +50,13 @@ namespace MemesUnleashed.NPCs.Bosses
 			}
 			music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/Throwdown!");
 		}
+		        public override void AI()
+        {
+
+            if (Main.rand.Next(0, 8) == 0) Dust.NewDust(npc.position + npc.velocity, npc.width, npc.height, mod.DustType("Static"), 0f, 0f);
+			if (Main.rand.Next(0, 12) == 0) Projectile.NewProjectile(npc.position.X, npc.position.Y, 0, 0, mod.ProjectileType("HostileStaticBall"), npc.damage, 3f, Main.myPlayer);
+		}
+			
 		public override void BossLoot(ref string name, ref int potionType)
 		{
 			potionType = ItemID.HealingPotion;
@@ -58,7 +64,7 @@ namespace MemesUnleashed.NPCs.Bosses
 		}
 		public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
 		{
-			npc.lifeMax = (int)(npc.lifeMax / Main.expertLife * 1.1f * bossLifeScale);
+			npc.lifeMax = (int)(npc.lifeMax / Main.expertLife * 1f * bossLifeScale);
 			npc.defense = 9;
 		}
 	}

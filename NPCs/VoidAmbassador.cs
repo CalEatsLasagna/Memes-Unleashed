@@ -95,11 +95,11 @@ namespace MemesUnleashed.NPCs
 				case 0:
 					return "K'th'all";
 				case 1:
-					return "K'th'all";
+					return "D'Aru";
 				case 2:
-					return "K'th'all";
+					return "Cero";
 				default:
-					return "K'th'all";
+					return "Pol";
 			}
 		}
 
@@ -121,7 +121,7 @@ namespace MemesUnleashed.NPCs
 			int Guide = NPC.FindFirstNPC(NPCID.Guide);
 			if (Guide >= 0 && Main.rand.Next(4) == 0)
 			{
-				return "That guide... he's died many times hasn't he? His soul is incredibly splintered.";
+				return "That guide... He's died many times hasn't he? His soul is incredibly splintered.";
 			}
 			switch (Main.rand.Next(3))
 			{
@@ -173,6 +173,10 @@ namespace MemesUnleashed.NPCs
 			shop.item[nextSlot].SetDefaults(mod.ItemType("Shale"));
 			nextSlot++;
 			shop.item[nextSlot].SetDefaults(mod.ItemType("NullSingularity"));
+			nextSlot++;
+			shop.item[nextSlot].SetDefaults(mod.ItemType("BlackTurbulence"));
+			nextSlot++;
+			shop.item[nextSlot].SetDefaults(mod.ItemType("Grayscale"));
 			nextSlot++;
 		}
 

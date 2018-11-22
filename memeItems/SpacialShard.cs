@@ -22,8 +22,8 @@ namespace MemesUnleashed.memeItems
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(null, "Shale", 30);
-			recipe.AddTile(null, "Compressor");
+			recipe.AddIngredient(null, "Shale", 5);
+			recipe.AddTile(null, "Purifier");
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

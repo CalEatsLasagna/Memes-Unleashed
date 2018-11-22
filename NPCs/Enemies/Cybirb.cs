@@ -17,7 +17,7 @@ namespace MemesUnleashed.NPCs.Enemies
 			npc.height = 33;
 			npc.damage = 16;
 			npc.defense = 6;
-			npc.lifeMax = 89;
+			npc.lifeMax = 68;
 			npc.noGravity = true;
 			npc.HitSound = SoundID.NPCHit1;
 			npc.DeathSound = SoundID.NPCDeath2;

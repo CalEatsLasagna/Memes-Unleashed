@@ -54,7 +54,7 @@ namespace MemesUnleashed.NPCs.Bosses
 		
 		public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
 		{
-			npc.lifeMax = (int)(npc.lifeMax / Main.expertLife * 1.2f * bossLifeScale);
+			npc.lifeMax = (int)(npc.lifeMax / Main.expertLife * 1f * bossLifeScale);
 			npc.defense = 14;
 		}
 	}

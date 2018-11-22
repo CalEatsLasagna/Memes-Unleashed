@@ -18,12 +18,13 @@ namespace MemesUnleashed.memeItems.Weapons
 			item.ranged = true;
 			item.width = 32;
 			item.height = 32;
-			item.useTime = 18;
-			item.useAnimation = 6;
+			item.useTime = 9;
+			item.useAnimation = 18;
+			item.reuseDelay = 13;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 4;
-			item.value = 10000;
+			item.value = 4000;
 			item.rare = 3;
 			item.UseSound = SoundID.Item11;
 			item.autoReuse = false;

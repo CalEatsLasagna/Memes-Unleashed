@@ -12,7 +12,7 @@ namespace MemesUnleashed.memeItems.Weapons
 		}
 		public override void SetDefaults()
 		{
-			item.damage = 34;
+			item.damage = 38;
 			item.melee = true;
 			item.width = 108;
 			item.height = 108;
@@ -32,6 +32,7 @@ namespace MemesUnleashed.memeItems.Weapons
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(null, "CompressedStatic", 10);
+			recipe.AddIngredient(ItemID.HellstoneBar, 10);
 			recipe.AddIngredient(null, "HopperBlade");
 			recipe.AddTile(null, "Compressor");
 			recipe.SetResult(this);

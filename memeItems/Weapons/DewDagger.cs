@@ -23,9 +23,9 @@ namespace MemesUnleashed.memeItems.Weapons
 
 			item.consumable = true;
 			item.noUseGraphic = true;
-			item.noMelee = false;
+			item.noMelee = true;
 			item.autoReuse = true;
-			item.thrown = false;
+			item.thrown = true;
 
 			item.UseSound = SoundID.Item1;
 			item.value = Item.sellPrice(silver: 5);

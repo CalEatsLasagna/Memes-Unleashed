@@ -17,7 +17,7 @@ namespace MemesUnleashed.memeItems.Weapons
 			item.ranged = true;
 			item.width = 8;
 			item.height = 8;
-			item.maxStack = 9999;
+			item.maxStack = 999;
 			item.consumable = true;             //You need to set the item consumable so that the ammo would automatically consumed
 			item.knockBack = 2.5f;
 			item.value = 10;
@@ -30,9 +30,9 @@ namespace MemesUnleashed.memeItems.Weapons
 		// Give each bullet consumed a 10% chance of granting the OnFire! buff for 4 seconds
 		public override void OnConsumeAmmo(Player player)
 		{
-			if (Main.rand.NextBool(10))
+			if (Main.rand.NextBool(20))
 			{
-				player.AddBuff(BuffID.OnFire, 240);
+				player.AddBuff(BuffID.OnFire, 120);
 			}
 		}
 

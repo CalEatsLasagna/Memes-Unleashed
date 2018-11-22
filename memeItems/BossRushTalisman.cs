@@ -30,10 +30,7 @@ namespace MemesUnleashed.memeItems
 			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("Weegee"));
 			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("Mayro"));
 			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("BladeDemon"));
-			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("Wokebird"));
 			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("Sanic"));
-			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("ReverseSanic"));
-			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("DarkSanic"));
 			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("GiantGrasshopper"));
 			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("Missingno"));
 			Main.PlaySound(SoundID.Roar, player.position, 0);
@@ -42,7 +39,7 @@ namespace MemesUnleashed.memeItems
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(null, "MemeCoin", 999);
+			recipe.AddIngredient(null, "MemeCoin", 99);
 			recipe.AddIngredient(ItemID.FragmentVortex, 20);
 			recipe.AddIngredient(ItemID.FragmentSolar, 20);
 			recipe.AddIngredient(ItemID.FragmentNebula, 20);

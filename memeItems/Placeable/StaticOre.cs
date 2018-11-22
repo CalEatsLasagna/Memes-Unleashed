@@ -11,7 +11,6 @@ namespace MemesUnleashed.memeItems.Placeable
 		public override void SetStaticDefaults()
 		{
 			Tooltip.SetDefault("It's buzzing softly.");
-			ItemID.Sets.ExtractinatorMode[item.type] = item.type;
 
 	
 		}
@@ -28,19 +27,6 @@ namespace MemesUnleashed.memeItems.Placeable
 			item.useStyle = 1;
 			item.consumable = true;
 			item.createTile = mod.TileType("StaticOre");
-		}
-
-
-		public override void ExtractinatorUse(ref int resultType, ref int resultStack)
-		{
-			if (Main.rand.Next(30) == 0)
-			{
-				resultType = mod.ItemType("Shale");
-				if (Main.rand.Next(5) == 0)
-				{
-					resultStack += Main.rand.Next(2);
-				}
 			}
 		}
 	}
-}

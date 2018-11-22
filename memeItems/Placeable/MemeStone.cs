@@ -23,8 +23,8 @@ namespace MemesUnleashed.memeItems.Placeable
 			item.maxStack = 999;
 			item.useTurn = true;
 			item.autoReuse = true;
-			item.useAnimation = 15;
-			item.useTime = 10;
+			item.useAnimation = 2;
+			item.useTime = 2;
 			item.useStyle = 1;
 			item.consumable = true;
 			item.createTile = mod.TileType("MemeStone");
@@ -38,6 +38,11 @@ namespace MemesUnleashed.memeItems.Placeable
 			recipe.AddIngredient(null, "MemeCoin", 2);
 			recipe.SetResult(this, 20);
 			recipe.AddRecipe();
+		
+			ModRecipe recipe2 = new ModRecipe(mod);
+			recipe2.AddIngredient(null, "MemeWall", 4);
+			recipe2.SetResult(this);
+			recipe2.AddRecipe();
 			}
 		}
 

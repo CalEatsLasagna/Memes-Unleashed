@@ -27,8 +27,6 @@ namespace MemesUnleashed.memeItems
 		public override bool UseItem(Player player)
 		{
 			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("Sanic"));
-			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("DarkSanic"));
-			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("ReverseSanic"));
 			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;
 		}

@@ -16,8 +16,9 @@ namespace MemesUnleashed.NPCs.Bosses
 	public class BladeDemon : ModNPC{
 	int timer = 0;
 	
-		private const int size = 200;
+		private const int size = 128;
 		private const int particleSize = 10;
+		private const int frameSize = size;
 		public static readonly int arenaWidth = (int)(1f * NPC.sWidth);
 		public static readonly int arenaHeight = (int)(1f * NPC.sHeight);
 
@@ -25,6 +26,7 @@ namespace MemesUnleashed.NPCs.Bosses
 		{
 			DisplayName.SetDefault("Blade Demon");
 			NPCID.Sets.MustAlwaysDraw[npc.type] = true;
+			Main.npcFrameCount[npc.type] = Main.npcFrameCount[NPCID.Zombie];
 		}
 
 		public override void SetDefaults()
@@ -53,8 +55,7 @@ namespace MemesUnleashed.NPCs.Bosses
 			music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/Throwdown!");
 		}
 				public override void AI()
-		{
-			
+		{	
 		timer++;
 		if (timer % 80 == 0)
 		NPC.NewNPC((int)npc.position.X, (int)npc.position.Y, mod.NPCType("SpiritSword"));
@@ -62,8 +63,13 @@ namespace MemesUnleashed.NPCs.Bosses
 		
 		public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
 		{
-			npc.lifeMax = (int)(npc.lifeMax / Main.expertLife * 1.0875f * bossLifeScale);
+			npc.lifeMax = (int)(npc.lifeMax / Main.expertLife * 1f * bossLifeScale);
 			npc.defense = 12;
+		}
+				public override void BossLoot(ref string name, ref int potionType)
+		{
+			potionType = ItemID.HealingPotion;
+			Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SinisterDuality"));
 		}
 	}
 }

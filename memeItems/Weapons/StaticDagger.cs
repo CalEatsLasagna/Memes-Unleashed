@@ -11,7 +11,7 @@ namespace MemesUnleashed.memeItems.Weapons
 		{
 			// Alter any of these values as you see fit, but you should probably keep useStyle on 1, as well as the noUseGraphic and noMelee bools
 			item.shootSpeed = 12f;
-			item.damage = 15;
+			item.damage = 9;
 			item.knockBack = 4f;
 			item.useStyle = 1;
 			item.useAnimation = 6;

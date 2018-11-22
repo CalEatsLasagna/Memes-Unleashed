@@ -14,8 +14,8 @@ namespace MemesUnleashed.memeItems.Weapons
 		{
 			item.damage = 46;
 			item.melee = true;
-			item.width = 256;
-			item.height = 224;
+			item.width = 128;
+			item.height = 128;
 			item.useTime = 10;
 			item.useAnimation = 10;
 			item.useStyle = 1;

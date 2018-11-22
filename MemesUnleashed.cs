@@ -27,9 +27,11 @@ namespace MemesUnleashed
 		{
 		if (!Main.dedServ)
 		
-			//music boxes
-		AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/OneTwoOatmeal"), ItemType("OneTwoOatmeal"), TileType("OneTwoOatmeal"));
-		AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/StaticFlux"), ItemType("StaticFlux"), TileType("StaticFlux"));
+		//music boxes
+			{
+			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/OneTwoOatmeal"), ItemType("OneTwoOatmeal"), TileType("OneTwoOatmeal"));
+			AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/StaticFlux"), ItemType("StaticFlux"), TileType("StaticFlux"));
+			}
 		}
 	}
 }

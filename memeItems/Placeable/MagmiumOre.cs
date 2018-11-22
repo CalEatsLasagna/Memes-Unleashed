@@ -10,7 +10,7 @@ namespace MemesUnleashed.memeItems.Placeable
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("Shimmering like a hot coal.");
+			Tooltip.SetDefault("Static ore that overheated upon the world's creation. It is shimmering like a hot coal.");
 
 	
 		}

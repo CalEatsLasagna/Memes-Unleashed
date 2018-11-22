@@ -27,9 +27,21 @@ namespace MemesUnleashed.memeItems.Weapons
 			item.rare = 6;
 			item.UseSound = mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/StaticBlast");
 			item.autoReuse = true;
-			item.shoot = 10; //idk why but all the guns in the vanilla source have this
+			item.shoot = ProjectileID.MagicMissile;
 			item.shootSpeed = 24f;
 			item.useAmmo = AmmoID.Rocket;
+		}
+			public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+		{
+			int numberProjectiles = 2 + Main.rand.Next(2); // 4 or 5 shots
+			for (int i = 0; i < numberProjectiles; i++)
+			{
+				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(12)); // 30 degree spread.
+				 float scale = 1f - (Main.rand.NextFloat() * .3f);
+				 perturbedSpeed = perturbedSpeed * scale; 
+				 Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, ProjectileID.MagicMissile, damage, knockBack, player.whoAmI);
+			}
+			return false;
 		}
 
 		public override void AddRecipes()

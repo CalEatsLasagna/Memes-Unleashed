@@ -34,8 +34,8 @@ namespace MemesUnleashed.memeItems.Placeable
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.StoneBlock, 2);
-			recipe.SetResult(this, 2);
+			recipe.AddIngredient(ItemID.StoneBlock, 3);
+			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
 

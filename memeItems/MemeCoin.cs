@@ -13,7 +13,7 @@ namespace MemesUnleashed.memeItems
 		{
 			item.width = 20;
 			item.height = 20;
-			item.maxStack = 9999;
+			item.maxStack = 999;
 			item.value = 1000;
 			item.rare = 4;
 		}
